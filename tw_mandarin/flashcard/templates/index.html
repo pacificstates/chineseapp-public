@@ -1,0 +1,53 @@
+<!-- {% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to Taiwan Mandarin! A place to learn Taiwanese Mandarin</h2>
+
+{% for item in vocablist %}
+<p>vocablist.chinese</p>
+<p>vocablist.english</p>
+{% endfor %}
+{% endblock %} -->
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Taiwan Mandarin</title>
+</head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="min-width:180px">
+      <img style="height:64px" src="https://htmljstemplates.com/static_files/images/logos/new_icon_1.png?ezimgfmt=rs:97x64/rscb1/ngcb1/notWebP" alt="new logo" ezimgfmt="rs rscb1 src ng ngcb1" class=" ezlazyloaded" data-ezsrc="https://htmljstemplates.com/static_files/images/logos/new_icon_1.png?ezimgfmt=rs:97x64/rscb1/ngcb1/notWebP" ezoid="0.2315212424306199"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link mx-2" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mx-2" href="#">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mx-2" href="#">Services</a>
+      </li>
+      <li class="nav-item customSubMenuHolder">
+        <a class="nav-link mx-2 active" href="#"><span class="me-1">Blog</span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#000" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                </svg></a><div class="customSubMenu p-4"><div class="container"><div class="row"><div class="col-lg-4 col-md-4 col-xs-12"><div class="my-2"><div class="row"><div class="col-lg-6 col-md-6 col-xs-12"><img class="img-fluid ezlazyloaded" src="https://htmljstemplates.com/static_files/images/htmlCss.jpg?ezimgfmt=rs:166x125/rscb1/ng:webp/ngcb1" ezimgfmt="rs rscb1 src ng ngcb1" data-ezsrc="https://htmljstemplates.com/static_files/images/htmlCss.jpg?ezimgfmt=rs:166x125/rscb1/ng:webp/ngcb1" ezoid="0.17088365029613595"></div><div class="col-lg-6 col-md-6 col-xs-12"><a href="#" class="h5 text-white">Editable Bootstrap template</a><p class="text-secondary">Templates built using bootstrap 5. Simply open the page, start editing and download</p></div></div></div></div><div class="col-lg-4 col-md-4 col-xs-12"><div class="my-2"><div class="row"><div class="col-lg-6 col-md-6 col-xs-12"><img class="img-fluid ezlazyloaded" src="https://htmljstemplates.com/static_files/images/dayPlanner.jpg?ezimgfmt=rs:166x125/rscb1/ng:webp/ngcb1" ezimgfmt="rs rscb1 src ng ngcb1" data-ezsrc="https://htmljstemplates.com/static_files/images/dayPlanner.jpg?ezimgfmt=rs:166x125/rscb1/ng:webp/ngcb1" ezoid="0.30277822205074756"></div><div class="col-lg-6 col-md-6 col-xs-12"><a href="#" class="h5 text-white">Day Planner</a><p class="text-secondary">Play your day and create alarms. Perfect tool for users who want to track their time</p></div></div></div></div><div class="col-lg-4 col-md-4 col-xs-12"><div class="my-2"><div class="row"><div class="col-lg-6 col-md-6 col-xs-12"><img class="img-fluid ezlazyloaded" src="https://htmljstemplates.com/static_files/images/nodeJS.jpg?ezimgfmt=rs:166x125/rscb1/ng:webp/ngcb1" ezimgfmt="rs rscb1 src ng ngcb1" data-ezsrc="https://htmljstemplates.com/static_files/images/nodeJS.jpg?ezimgfmt=rs:166x125/rscb1/ng:webp/ngcb1" ezoid="0.646244497645375"></div><div class="col-lg-6 col-md-6 col-xs-12"><a href="#" class="h5 text-white">Integrate Salesforce With Node JS App</a><p class="text-secondary">You must have a decent knowledge of OAuth2 if you choose to work with in-browser implementation</p></div></div></div></div></div></div></div></li></ul><ul class="navbar-nav ms-auto d-none d-lg-inline-flex"><li class="nav-item mx-2"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+    </svg><span class="ms-1 align-middle">Cart</span></a></li><li class="nav-item mx-2"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+                </svg><span class="ms-1 align-texttop">Login</span></a></li></ul></div></div></nav>
+  </body>
+</html>

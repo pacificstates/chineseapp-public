@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Book {{ book }} Lessons</h1>
+<ol>
+    {% for num in range %}
+    <a class="list-group-item list-group-item-action" href="{% url 'Lesson' book=book lesson=num %}">Lesson {{ num }}</a>
+    {% endfor %}
+</ol>
+{% endblock %}
