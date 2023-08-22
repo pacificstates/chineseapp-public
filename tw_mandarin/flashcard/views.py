@@ -41,7 +41,7 @@ def next_card(request):
     redirect_url = reverse('Lesson', args=(book_id, lesson_id))
     return HttpResponseRedirect(f"{redirect_url}?from_next_card=true")
 
-@login_required
+@login_required(login_url="login")
 def create(request):
     if request.method == "POST":
         form = CreateNewCard(request.POST)
@@ -56,7 +56,7 @@ def create(request):
         form = CreateNewCard()
     return render(request, "create.html", {"form": form})
 
-@login_required
+@login_required(login_url="login")
 def customCards(request):
     list = CustomCards.objects.filter(user=request.user)
     if list.exists():
